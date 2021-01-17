@@ -4,6 +4,7 @@ import Cadastro from './pages/CadastroPage';
 
 
 import Landing from './pages/LandingPage';
+import Listagem from './pages/ListagemPage';
 
 function Routes () {
     return(
@@ -11,6 +12,7 @@ function Routes () {
             <Switch>
                 <Route path="/" exact component={Landing} />
                 <Route path="/cadastro" exact component={Cadastro} />
+                <Route path="/listagem" exact component={Listagem} />
             </Switch>
         </BrowserRouter>
     );

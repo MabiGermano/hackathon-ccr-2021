@@ -1,0 +1,19 @@
+.card .badge {
+    margin-left: 0;
+    border-radius: 10px;
+}
+
+
+.card-content #quote {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.card-action {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.card-action > a.see {
+    margin-top: .5rem;
+}
