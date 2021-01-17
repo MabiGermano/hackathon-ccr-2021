@@ -1,10 +1,12 @@
 import './App.css';
-import Cadastro from "./pages/CadastroPage"
+import Routes from './routes';
+import './assets/css/global.css'
+
 
 function App() {
   return (
     <>
-      <Cadastro/>
+      <Routes/>
     </>
   );
 }
