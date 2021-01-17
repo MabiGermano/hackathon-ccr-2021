@@ -1,8 +1,11 @@
 import './App.css';
+import Cadastro from "./pages/CadastroPage"
 
 function App() {
   return (
-    <h1>Hello world</h1>
+    <>
+      <Cadastro/>
+    </>
   );
 }
 
