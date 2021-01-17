@@ -1,14 +1,38 @@
-html, body {
+html,
+body {
     height: 100vh;
     width: 100vw;
 }
-.tiny-text{
+
+.tiny-text {
     font-size: 16px;
 }
 
 .bold {
     font-weight: bold;
 }
+
 .row {
     margin-bottom: 0;
+}
+
+.input-field input[type=text]:focus+label {
+    color: #d81b60 !important;
+}
+
+.input-field input[type=text]:focus {
+    border-bottom: 1px solid #d81b60 !important;
+    box-shadow: 0 1px 0 0 #d81b60 !important;
+}
+
+input[type="radio"]:checked + label::after, input[type="radio"].with-gap:checked + label::after {
+    background-color: #d81b60 !important;
+}
+input[type="radio"]:checked + label::after, input[type="radio"].with-gap:checked + label::before, input[type="radio"].with-gap:checked + label::after {
+    border: 2px solid #d81b60 !important;
+}
+
+input[type="checkbox"].filled-in:checked + label:after{
+    border: 2px solid #d81b60;
+    background-color: #d81b60;
 }

@@ -1,9 +1,10 @@
 import React from "react";
 
-const Input = ({name, label}) => {
+const Input = ({name, label, placeholder, ...rest}) => {
+   
     return(
         <div className="input-field">
-            <input placeholder="Placeholder" id={name} type="text" className="validate"/>
+            <input placeholder={placeholder} id={name} type="text" className="validate" {...rest}/>
             <label htmlFor={name}>{label}</label>
         </div>
     );

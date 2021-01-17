@@ -1,0 +1,17 @@
+#cadastro-page main {
+    width: 60%;
+    margin: auto;
+    margin-bottom: 1rem !important;
+}
+
+#cadastro-page main div {
+    margin-bottom: 3rem !important;
+}
+
+
+#cadastro-page footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
