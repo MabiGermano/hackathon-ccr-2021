@@ -3,26 +3,26 @@ import { Link } from 'react-router-dom';
 
 import '../assets/css/card.css';
 
-const Card = () => {
+const Card = ({personStudent}) => {
     return (
         <div class="card">
             <div class="card-content">
                 <span class="card-title">
-                    Teste nome
+                    {personStudent.name}
                     <Link class="pink-text text-darken1 material-icons right">
                         favorite_border
                     </Link>
                 </span>
 
                 <div>
-                    <span className="tiny-text grey-text">21 anos</span>
+                    <span className="tiny-text grey-text">{personStudent.bornDate} anos</span>
                 </div>
                 <div>
-                    <span class="left badge grey white-text">Development</span>
+                    <span class="left badge grey white-text">{personStudent.occupationArea}</span>
                 </div>
                 <br />
                 <div id="quote">
-                    <p className="grey-text">"isso é um grande teste "</p>
+                    <p className="grey-text">{`"${personStudent.mentorExpectations}"`}</p>
                 </div>
             </div>
             <div class="card-action">

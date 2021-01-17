@@ -1,4 +1,8 @@
-#listagem-page div > .card {
+#listagem-page main {
+    display: flex;
+    justify-content: center;
+}
+#listagem-page main > .card {
     width: 25%;
     margin: 1rem;
     border-radius: 20px 20px 0 0;
