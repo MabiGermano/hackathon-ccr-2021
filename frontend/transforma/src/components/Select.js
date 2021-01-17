@@ -1,9 +1,9 @@
 import React from "react";
 
-const Select = () => {
+const Select = ({option}) => {
   return (
-    <div class="input-field">
-        <select>
+    <div className="input-field">
+        <select id={option}>
           <option value="" disabled selected>Choose your option</option>
           <option value="1">Option 1</option>
           <option value="2">Option 2</option>
