@@ -15,11 +15,11 @@ routes.post('/personStudent', async (request: Request, response: Response) => {
     const {
         name,
         bornDate,
-        genderIdentity,
         email,
         hasExperience,
         occupationArea,
-        experienceDescription,
+        cell,
+        linkedinUrl,
         mentorExpectations,
     } = request.body;
 
@@ -28,11 +28,11 @@ routes.post('/personStudent', async (request: Request, response: Response) => {
     const data = {
         name,
         bornDate,
-        genderIdentity,
         email,
         hasExperience,
         occupationArea,
-        experienceDescription,
+        cell,
+        linkedinUrl,
         mentorExpectations,
     };
 

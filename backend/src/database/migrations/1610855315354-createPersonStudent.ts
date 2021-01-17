@@ -24,8 +24,14 @@ export class createPersonStudent1610855315354 implements MigrationInterface {
           type: 'date',
         },
         {
-            name: 'genderIdentity',
-            type: 'varchar'
+            name: 'linkedinUrl',
+            type: 'varchar',
+            isNullable: true
+        },
+        {
+            name: 'cell',
+            type: 'varchar',
+            isNullable: true
         },
         {
             name: 'email',
@@ -38,10 +44,6 @@ export class createPersonStudent1610855315354 implements MigrationInterface {
         {
             name: 'occupationArea',
             type: 'varchar'
-        },
-        {
-            name: 'experienceDescription',
-            type: 'text'
         },
         {
             name: 'mentorExpectations',

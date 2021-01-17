@@ -12,7 +12,10 @@ export default class PersonStudent {
     bornDate: Date;
 
     @Column()
-    genderIdentity: String;
+    cell: String;
+
+    @Column()
+    linkedinUrl: String;
 
     @Column()
     email: String;
@@ -22,10 +25,7 @@ export default class PersonStudent {
 
     @Column()
     occupationArea: String;
-
-    @Column()
-    experienceDescription: String;
-
+    
     @Column()
     mentorExpectations: String;
 
