@@ -1,5 +1,6 @@
-const express = require('express');
-const routes = express.Router();
+import { Router } from 'express';
+
+const routes = Router();
 
 routes.get('/personStudent', (request, response) => {
     response.json({ list: [] });
