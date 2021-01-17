@@ -46,10 +46,6 @@ export class createPersonStudent1610855315354 implements MigrationInterface {
         {
             name: 'mentorExpectations',
             type: 'varchar'
-        },
-        {
-          name: 'about',
-          type: 'text'
         }
       ] 
       }))

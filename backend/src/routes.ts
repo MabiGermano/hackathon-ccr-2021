@@ -4,11 +4,14 @@ import PersonStudent from './models/PersonStudent';
 
 const routes = Router();
 
-routes.get('/personStudent', (request: Request, response: Response) => {
-    response.json({ list: [] });
+routes.get('/personStudent', async (request: Request, response: Response) => {
+    const personStudentRepository = getRepository(PersonStudent);
+    const personStudent = await personStudentRepository.find();
+
+    return response.json(personStudent);
 });
 
-routes.post('/personStudent', (request: Request, response: Response) => {
+routes.post('/personStudent', async (request: Request, response: Response) => {
     const {
         name,
         bornDate,
@@ -35,7 +38,7 @@ routes.post('/personStudent', (request: Request, response: Response) => {
 
     const personStudent = personStudentRepository.create(data);
 
-    personStudentRepository.save(personStudent);
+    await personStudentRepository.save(personStudent);
     return response.status(201).json(personStudent);
 
 });
