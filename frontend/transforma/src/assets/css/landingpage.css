@@ -64,3 +64,27 @@
     margin: 5rem;
 }
 
+#landing-page main div {
+    margin-top: 2rem;
+
+}
+
+#landing-page main div #Mentor {
+    margin-top: 1rem;
+    width: 450px;
+    height: 300px;
+    display: flex;
+    align-content: center;
+    justify-content:center;
+}
+
+#landing-page main div #Mentor-img img {
+    margin-left: 5rem;
+    margin-right: 2rem;
+    border-radius: 15px;
+    max-width:500px;
+    max-height:500px;
+    width: auto;
+    height: auto;
+}
+
