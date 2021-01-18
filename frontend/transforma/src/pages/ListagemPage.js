@@ -49,7 +49,17 @@ const Listagem = () => {
                 </header>
                 <div id="main-content">
 
-                    {
+                    {personStudentList.length <= 0
+                        ?
+                        <div id="no-users">
+                            <span class="material-icons grey-text">
+                                warning
+                            </span>
+                            <h4 className="tiny-text grey-text bold">
+                                POR ENQUANTO NÃO TEMOS MENTORANDAS DISPONÍVEIS!
+                        </h4>
+                        </div>
+                        :
                         personStudentList.map((personStudent, index) => {
                             return (
                                 <Card key="index" personStudent={personStudent} />

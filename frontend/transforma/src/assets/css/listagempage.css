@@ -10,6 +10,16 @@
     border-radius: 20px 20px 0 0;
 }
 
+
+#listagem-page div#main-content h4 {
+    text-align: center;
+    width: 100%;
+}
+
+#listagem-page div#main-content span.material-icons {
+    margin-top: 1rem;
+}
+
 #listagem-page header {
     height: 20rem;
     width: 100%;
@@ -37,4 +47,14 @@
     object-position: 50% 70%;
     object-fit: cover;
     border-radius: 70px 0 0 0;
+}
+
+#listagem-page #no-users {
+    margin: auto;
+    text-align: center;
+}
+
+#listagem-page #no-users span {
+    font-size: 2.6rem;
+    
 }

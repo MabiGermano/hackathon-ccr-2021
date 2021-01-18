@@ -13,6 +13,11 @@
 
 }
 
+#landing-page main #presentation h1 {
+    font-size: 50px;
+    font-weight: bolder;
+}
+
 #landing-page main #presentation div{
     display: flex;
     flex-direction: column;

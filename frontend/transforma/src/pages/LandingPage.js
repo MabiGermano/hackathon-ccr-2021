@@ -24,8 +24,8 @@ const Landing = () => {
                                 Se você é mulher, jovem e quer entrar na área de tecnologia mas não sabe por onde começar: vem com a gente!
                         </p>
                             <div className="action-buttons">
-                                <Link class="pink darken-1 waves-effect waves-light btn-large">Quero receber mentoria</Link>
-                                <Link class="white black-text waves-effect waves-light btn-large">Quero apoiar</Link>
+                                <Link to="/cadastro" class="pink darken-1 waves-effect waves-light btn-large">Quero receber mentoria</Link>
+                                <Link to="/listagem" class="white black-text waves-effect waves-light btn-large">Quero apoiar</Link>
 
                             </div>
                         </div>
@@ -53,7 +53,7 @@ const Landing = () => {
                         </p>
                 </div>
                 <div>
-                    <Link className="white pink-text text-darken-1 right s-mt-2 nav-button waves-effect waves-light btn">Inscreva-se grátis</Link>
+                    <Link to="/cadastro" className="white pink-text text-darken-1 right s-mt-2 nav-button waves-effect waves-light btn">Inscreva-se grátis</Link>
                 </div>
             </footer>
         </div>
