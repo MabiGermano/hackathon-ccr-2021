@@ -37,7 +37,7 @@ const Cadastro = () => {
             occupationArea: occupationArea,
             hasExperience: hasExperience
         };
-        api.post('personStudent', body)
+        await api.post('personStudent', body)
         .then(() => {
             alert("Cadastro realizado com sucesso!");
             history.push('/');

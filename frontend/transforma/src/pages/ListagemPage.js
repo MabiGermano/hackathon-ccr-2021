@@ -23,6 +23,7 @@ const Listagem = () => {
         console.log(personStudentList);
     }
 
+   
     return (
         <div id="listagem-page">
             <Navbar />
