@@ -1,9 +1,40 @@
-#listagem-page main {
+#listagem-page div#main-content {
     display: flex;
-    justify-content: center;
+    
+    width: 100%;
 }
-#listagem-page main > .card {
-    width: 25%;
-    margin: 1rem;
+
+#listagem-page div#main-content > .card {
+    width: 23%;
+    margin: .5rem;
     border-radius: 20px 20px 0 0;
+}
+
+#listagem-page header {
+    height: 20rem;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+
+#listagem-page header #presentation {
+    padding: 2rem;
+}
+
+#listagem-page header h1 {
+    font-size: 50px;
+    font-weight: bolder;
+}
+
+#listagem-page header #presentation-img {
+    height: 20rem;
+    object-fit: contain;
+}
+
+#listagem-page header div img {
+    height: 100%;
+    width: 100%;
+    object-position: 50% 70%;
+    object-fit: cover;
+    border-radius: 70px 0 0 0;
 }
