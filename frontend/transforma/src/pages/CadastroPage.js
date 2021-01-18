@@ -13,7 +13,7 @@ const Cadastro = () => {
 
 
     const history = useHistory();
-    
+
     const [name, setName] = useState('');
     const [bornDate, setBornDate] = useState('');
     const [email, setEmail] = useState('');
@@ -23,13 +23,23 @@ const Cadastro = () => {
     const [occupationArea, setOccupationArea] = useState('');
     const [hasExperience, setHasExperience] = useState('');
 
+    function formatDate() {
+
+        var day = bornDate.split("/")[0];
+        var month = bornDate.split("/")[1];
+        var year = bornDate.split("/")[2];
+
+        return  ("0" + month).slice(-2) + '-' + ("0" + day).slice(-2) + '-' + year;
+
+    }
 
     async function handleSubmit(event) {
         event.preventDefault();
+
         console.log('submetendo');
         const body = {
             name: name,
-            bornDate: bornDate,
+            bornDate: formatDate(),
             email: email,
             cell: cell,
             linkedinUrl: linkedinUrl,
@@ -38,12 +48,12 @@ const Cadastro = () => {
             hasExperience: hasExperience
         };
         await api.post('personStudent', body)
-        .then(() => {
-            alert("Cadastro realizado com sucesso!");
-            history.push('/');
-        }).catch(() => {
-            alert("Erro no cadastro!");
-        });
+            .then(() => {
+                alert("Cadastro realizado com sucesso!");
+                history.push('/');
+            }).catch(() => {
+                alert("Erro no cadastro!");
+            });
 
         console.log(body);
     }
@@ -90,7 +100,7 @@ const Cadastro = () => {
                             name="name"
                             label="Nome Completo*"
                             placeholder="Digite seu nome"
-                            onChange={(e) => {setName(e.target.value)}}
+                            onChange={(e) => { setName(e.target.value) }}
                         />
                     </div>
                     <div >
@@ -98,7 +108,7 @@ const Cadastro = () => {
                             name="bornDate"
                             label="Data de Nascimento*"
                             placeholder="DD/MM/AAAA"
-                            onChange={(e) => {setBornDate(e.target.value)}}
+                            onChange={(e) => { setBornDate(e.target.value) }}
                         />
                     </div>
                     <div >
@@ -106,7 +116,7 @@ const Cadastro = () => {
                             name="email"
                             label="Endereço de e-mail*"
                             placeholder="Digite seu e-mail"
-                            onChange={(e) => {setEmail(e.target.value)}}
+                            onChange={(e) => { setEmail(e.target.value) }}
                         />
                     </div>
                     <div >
@@ -114,7 +124,7 @@ const Cadastro = () => {
                             name="cell"
                             label="Celular*"
                             placeholder="(XX) XXXXX-XXXX"
-                            onChange={(e) => {setCell(e.target.value)}}
+                            onChange={(e) => { setCell(e.target.value) }}
                         />
                     </div>
 
@@ -123,7 +133,7 @@ const Cadastro = () => {
                             name="linkedinUrl"
                             label="Endereço do Linkedin (opcional)"
                             placeholder="linkedin.com/in/url"
-                            onChange={(e) => {setLinkedinUrl(e.target.value)}}
+                            onChange={(e) => { setLinkedinUrl(e.target.value) }}
                         />
                     </div>
 
@@ -133,15 +143,15 @@ const Cadastro = () => {
                             name="mentorExpectations"
                             label="O que você procura na nossa mentoria?*"
                             placeholder="Exemplo: Entender o que preciso para ser um desenvolvedor"
-                            onChange={(e) => {setMentorExpectations(e.target.value)}}
+                            onChange={(e) => { setMentorExpectations(e.target.value) }}
                         />
                     </div>
                     <div>
-                        <Select 
-                        name="occupationArea" 
-                        options={occupationAreaList} 
-                        label="Área de interesse*" 
-                        onChange={(e) => {setOccupationArea(e.target.value)}}
+                        <Select
+                            name="occupationArea"
+                            options={occupationAreaList}
+                            label="Área de interesse*"
+                            onChange={(e) => { setOccupationArea(e.target.value) }}
                         />
                     </div>
 
@@ -151,14 +161,14 @@ const Cadastro = () => {
                             name="hasExperience"
                             label="Sim"
                             value="true"
-                            onChange={(e) => {setHasExperience(e.target.value)}}
+                            onChange={(e) => { setHasExperience(e.target.value) }}
                         />
                         <RadioButton
                             name="hasExperience"
                             label="Não"
                             value="false"
                             checked={true}
-                            onChange={(e) => {setHasExperience(e.target.value)}}
+                            onChange={(e) => { setHasExperience(e.target.value) }}
                         />
                     </div>
 

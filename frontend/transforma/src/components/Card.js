@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import calcIdade from '../services/utils'
 
 import '../assets/css/card.css';
 import api from '../services/api';
@@ -25,7 +26,7 @@ const Card = ({ personStudent }) => {
                 </span>
 
                 <div>
-                    <span className="tiny-text grey-text">{personStudent.bornDate} anos</span>
+                    <span className="tiny-text grey-text">{calcIdade(personStudent.bornDate)} anos</span>
                 </div>
                 <div>
                     <span class="left badge grey white-text">{personStudent.occupationArea}</span>

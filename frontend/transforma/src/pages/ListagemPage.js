@@ -22,7 +22,6 @@ const Listagem = () => {
         setPersonStudentList(response.data);
         console.log(personStudentList);
     }
-
    
     return (
         <div id="listagem-page">
